@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<!-- 配置为开发模式 生产改为false -->
+	<constant name="struts.devMode" value="true" />
+	<!-- 每次HTTP请求系统都重新加载资源文件，有助于开发 生产改为false -->
+	<constant name="struts.i18n.reload" value="true" />
+	<!-- struts配置文件改动后，是否重新加载 生产改为false -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<!-- 设置浏览器是否缓存静态内容 生产改为true -->
+	<constant name="struts.serve.static.browserCache" value="false" />
+	
+	
+	<!-- 配置扩展名为action -->
+    <constant name="struts.action.extension" value="action" />
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="utf-8" />
+    <!-- 文件上传最大值 -->
+	<constant name="struts.multipart.maxSize" value="104857600" />
+	<!-- 让struts2支持动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	
+    <package name="default" namespace="/" extends="struts-default">
+		<!-- 测试用的action，当与Spring整合后，class属性写的就是Spring中bean的名称 -->
+		<!-- action name="test" class="com.bw.oa.domain.TestAction" -->
+		<action name="test" class="testAction">
+			<result name="success">/index.jsp</result>
+			<result name="faild">/test1.jsp</result>
+		</action>		
+		<action name="ValidateCode" class="validateCodeAction">
+		</action>
+		<action name="UserLoginCheck" class="authCheckAction" method="checkLoginAuth">
+		<result name="success" type="redirect">/index.jsp</result>
+		</action>
+		<action name="menuAction!*" class="menuAction" method="{1}"></action>
+    </package>
+    
+</struts>

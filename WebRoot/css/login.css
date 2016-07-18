@@ -1,0 +1,96 @@
+@CHARSET "utf-8";
+body {
+	background: url(../images/bg.jpg) repeat-x top center #d6dee0;
+	font-size: 12px;
+	margin: auto;
+	width: 600px;
+	font-family: arial, helvetica, sans-serif, "宋体";
+}
+
+.main_panel {
+	background: url(../images/bg2.jpg);
+	position: relative;
+	left: 75px;
+	Top: 66px;
+	margin-top: -0px;
+	z-index: 1;
+	margin-left: -150px;
+	width: 832px;
+	Height: 518px;
+	text-align: left;
+}
+
+.textbox {
+	width: 150px;
+	height: 20px;
+	margin: 0;
+	padding: 0 2px;
+	box-sizing: content-box;
+}
+/**用户名div布局*/
+.user_name_panel {
+	position: absolute;
+	left: 438px;
+	Top: 219px;
+	margin-top: -0px;
+	z-index: 2;
+	margin-left: 0px;
+	text-align: left;
+}
+/**用户密码div布局*/
+.user_pwd_panel {
+	position: absolute;
+	left: 438px;
+	Top: 250px;
+	margin-top: -0px;
+	z-index: 2;
+	margin-left: 0px;
+	text-align: left;
+}
+/**验证码布局*/
+.user_validateCode_panel {
+	position: absolute;
+	left: 500px;
+	Top: 282px;
+	margin-top: -0px;
+	z-index: 2;
+	margin-left: 0px;
+	text-align: left;
+}
+/**验证码图片div布局*/
+.user_validateCode_img_panel
+{
+position: absolute;
+	left: 438px;
+	Top: 283px;
+	margin-top: -0px;
+	z-index: 2;
+	margin-left: 0px;
+	text-align: left;
+}
+/**登录按钮div布局*/
+.user_login_btn{
+position: absolute;
+	left: 439px;
+	Top: 343px;
+	margin-top: -0px;
+	z-index: 2;
+	margin-left: 0px;
+	text-align: left;
+}
+/**验证码文本框*/
+#user_validateCode {
+	width: 80px;
+	height: 20px;
+	margin: 0;
+	padding: 0 2px;
+	box-sizing: content-box;
+}
+/**验证码图片*/
+#ValidateCodeImg{
+	width: 60px;
+	height: 20px;
+	margin: 0;
+	padding: 0 2px;
+	box-sizing: content-box;
+}
